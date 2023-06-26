@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 pwd;
-runuser -l  ec2-user -c 'git pull origin';
-runuser -l  ec2-user -c 'git -C ../company-website pull origin';
-sudo cp -r ../company-website/* /usr/share/nginx/html/;
+git -C /home/ec2-user/deploy-gateway pull origin;
+git -C /home/ec2-user/company-website pull origin;
+cp -r ../company-website/* /usr/share/nginx/html/;
